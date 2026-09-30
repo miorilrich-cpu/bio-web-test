@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miori Studio - Minimal Pastel</title>
+    <title>Miori Studio - Cute Minimal</title>
     <!-- เรียกใช้ฟอนต์ Prompt -->
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
@@ -39,7 +39,7 @@
         .banner {
             width: 100%;
             height: 180px;
-            background: #fcefdc; /* สีครีมละมุน */
+            background: #fcefdc;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -71,7 +71,7 @@
         .logo-area {
             width: 110px;
             height: 110px;
-            background-color: #e8f4f2; /* เขียวพาสเทลอ่อนๆ */
+            background-color: #e8f4f2;
             border: 4px solid #ffffff;
             border-radius: 50%;
             display: flex;
@@ -105,32 +105,34 @@
             font-weight: 600;
         }
 
-        .intro-section p {
+        .typewriter-text {
             font-size: 12.5px;
             color: #7d7578;
             line-height: 1.7;
             margin-bottom: 4px;
         }
 
-        /* ปุ่ม Link Bio สไตล์มินิมอล โค้งมนนุ่มนวล */
+        /* ปุ่ม Link Bio สไตล์น่ารัก นุ่มฟู */
         .btn-bio {
             display: block;
             width: 82%;
             max-width: 300px;
-            background-color: #f7d6e0; /* ชมพูนมๆ มินิมอล */
-            color: #5c5255;
+            background: linear-gradient(135deg, #ffd1dc 0%, #ffb6c1 100%);
+            color: #5c454d;
             text-align: center;
-            padding: 11px;
-            border-radius: 20px;
+            padding: 12px;
+            border-radius: 30px;
             font-size: 15px;
-            font-weight: 500;
+            font-weight: 600;
             text-decoration: none;
             margin: 20px auto;
-            transition: all 0.2s ease;
+            box-shadow: 0 4px 15px rgba(255, 182, 193, 0.4);
+            transition: all 0.3s ease;
         }
 
         .btn-bio:hover {
-            background-color: #f2c4d3;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 182, 193, 0.6);
         }
 
         /* ตารางกล่อง 4 ช่องสไตล์ละมุน */
@@ -147,24 +149,75 @@
             width: 100%;
             height: 100px;
             background-color: #fef0f3;
-            border-radius: 16px;
+            border-radius: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
             color: #a8989c;
             font-size: 13px;
             font-weight: 400;
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            transition: transform 0.2s ease;
+            border: 1.5px dashed #ffccd5;
+            transition: transform 0.2s ease, background-color 0.2s ease;
         }
 
         .card-item:hover {
             transform: translateY(-2px);
+            background-color: #ffe6ed;
+        }
+
+        /* ส่วน Contact Us แบบน่ารัก */
+        .contact-section {
+            text-align: center;
+            margin: 15px 0 20px 0;
+            width: 100%;
+        }
+
+        .contact-title {
+            font-size: 15px;
+            color: #d17a93;
+            font-weight: 600;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .contact-btn {
+            width: 52px;
+            height: 52px;
+            background: #ffffff;
+            border: 2px solid #ffd1dc;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: #5c454d;
+            box-shadow: 0 4px 10px rgba(255, 182, 193, 0.25);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+        }
+
+        .contact-btn span {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .contact-btn:hover {
+            transform: scale(1.1) translateY(-3px);
+            background-color: #fff0f3;
+            border-color: #ffb6c1;
+            box-shadow: 0 6px 15px rgba(255, 182, 193, 0.4);
         }
 
         /* ฟุตเตอร์เว็บไซต์ */
         .footer-text {
-            margin-top: 15px;
+            margin-top: 10px;
             font-size: 11px;
             color: #b0a6a9;
             letter-spacing: 1px;
@@ -192,13 +245,13 @@
         <!-- ข้อความต้อนรับ -->
         <div class="intro-section">
             <h1>WELCOME TO MIORI STUDIO</h1>
-            <p>ร้านมิโอริ บริการรับทำ ทำป้าย ลายน้ำ ขายฟอนต์ ดึงเข้ากลุ่ม</p>
-            <p>และ รับทำเว็บไซต์ต่างๆมีเทมเพลสให้เลือกสรร</p>
-            <p>ลูกค้าต้องการอะไรสามารถแจ้งได้เลยน้า</p>
+            <p class="typewriter-text">ร้านมิโอริ บริการรับทำ ทำป้าย ลายน้ำ ขายฟอนต์ ดึงเข้ากลุ่ม</p>
+            <p class="typewriter-text">และ รับทำเว็บไซต์ต่างๆมีเทมเพลสให้เลือกสรร</p>
+            <p class="typewriter-text">ลูกค้าต้องการอะไรสามารถแจ้งได้เลยน้า</p>
         </div>
 
         <!-- ปุ่ม Link Bio -->
-        <a href="#" class="btn-bio">Link Bio</a>
+        <a href="#" class="btn-bio">✨ Link Bio ✨</a>
 
         <!-- กล่อง 4 ช่อง -->
         <div class="grid-container">
@@ -206,6 +259,21 @@
             <div class="card-item">พื้นที่ใส่รูป</div>
             <div class="card-item">พื้นที่ใส่รูป</div>
             <div class="card-item">พื้นที่ใส่รูป</div>
+        </div>
+
+        <!-- ส่วน Contact Us -->
+        <div class="contact-section">
+            <div class="contact-title">💗 Contact us 💗</div>
+            <div class="contact-buttons">
+                <!-- ปุ่ม Facebook -->
+                <a href="#" class="contact-btn" title="Facebook">
+                    <span style="color: #1877f2;">f</span>
+                </a>
+                <!-- ปุ่ม Line -->
+                <a href="#" class="contact-btn" title="Line">
+                    <span style="font-size: 11px; color: #06c755;">LINE</span>
+                </a>
+            </div>
         </div>
 
         <!-- ฟุตเตอร์ -->
