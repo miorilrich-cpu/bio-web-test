@@ -15,7 +15,7 @@
         }
 
         body {
-            background-color: #faf6f7;
+            background-color: #fcf9f9;
             color: #4a4547;
             display: flex;
             justify-content: center;
@@ -31,108 +31,109 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            padding-bottom: 35px;
+            border-left: 1px solid #f2e9ec;
+            border-right: 1px solid #f2e9ec;
+            box-shadow: 0 4px 20px rgba(235, 215, 220, 0.15);
         }
 
-        /* ส่วนแบนเนอร์สไตล์มินิมอล โทนพาสเทลอ่อน */
+        /* แบนเนอร์มินิมอลละมุนๆ */
         .banner {
             width: 100%;
-            height: 180px;
-            background: #fcefdc;
+            height: 170px;
+            background: #faedeb;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            position: relative;
         }
 
         .banner-box {
-            background: rgba(255, 255, 255, 0.7);
-            padding: 8px 24px;
-            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 8px 20px;
+            border-radius: 12px;
             text-align: center;
-            backdrop-filter: blur(5px);
+            border: 1px solid #f5dcde;
         }
 
         .banner-box h2 {
-            font-size: 18px;
-            color: #6d6466;
+            font-size: 16px;
+            color: #615256;
             font-weight: 500;
         }
 
         .banner-box p {
-            font-size: 13px;
-            color: #9c9295;
+            font-size: 12px;
+            color: #a89498;
             font-weight: 400;
         }
 
-        /* ส่วนโลโก้วงกลมมินิมอล ทับกึ่งกลาง */
+        /* โลโก้วงกลมมินิมอล */
         .logo-area {
-            width: 110px;
-            height: 110px;
-            background-color: #e8f4f2;
-            border: 4px solid #ffffff;
+            width: 100px;
+            height: 100px;
+            background-color: #f0f7f4;
+            border: 3px solid #ffffff;
             border-radius: 50%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-            margin-top: -55px;
+            margin-top: -50px;
             z-index: 10;
+            border: 1px solid #d8e8e2;
         }
 
         .logo-area span {
-            font-size: 14px;
-            font-weight: 500;
-            color: #617a74;
-            margin-top: 4px;
+            font-size: 13px;
+            font-weight: 400;
+            color: #648275;
+            margin-top: 2px;
         }
 
         /* ส่วนข้อความต้อนรับ */
         .intro-section {
             text-align: center;
-            padding: 20px 24px 10px 24px;
+            padding: 18px 24px 10px 24px;
             width: 100%;
         }
 
         .intro-section h1 {
-            font-size: 15px;
-            letter-spacing: 1.5px;
-            color: #4a4547;
-            margin-bottom: 10px;
+            font-size: 14px;
+            letter-spacing: 1px;
+            color: #4a4043;
+            margin-bottom: 8px;
             font-weight: 600;
         }
 
-        .typewriter-text {
-            font-size: 12.5px;
-            color: #7d7578;
-            line-height: 1.7;
-            margin-bottom: 4px;
+        .intro-section p {
+            font-size: 12px;
+            color: #857579;
+            line-height: 1.6;
+            margin-bottom: 3px;
         }
 
-        /* ปุ่ม Link Bio สไตล์น่ารัก นุ่มฟู */
+        /* ปุ่ม Link Bio แบบน่ารักนุ่มฟู */
         .btn-bio {
             display: block;
             width: 82%;
-            max-width: 300px;
-            background: linear-gradient(135deg, #ffd1dc 0%, #ffb6c1 100%);
-            color: #5c454d;
+            max-width: 290px;
+            background-color: #fae1e6;
+            color: #614d53;
             text-align: center;
-            padding: 12px;
-            border-radius: 30px;
-            font-size: 15px;
-            font-weight: 600;
+            padding: 11px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
             text-decoration: none;
-            margin: 20px auto;
-            box-shadow: 0 4px 15px rgba(255, 182, 193, 0.4);
-            transition: all 0.3s ease;
+            margin: 18px auto;
+            border: 1px solid #f5ccd4;
+            transition: all 0.2s ease;
         }
 
         .btn-bio:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(255, 182, 193, 0.6);
+            background-color: #f7d1d9;
+            transform: translateY(-2px);
         }
 
         /* ตารางกล่อง 4 ช่องสไตล์ละมุน */
@@ -141,85 +142,77 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 12px;
             width: 82%;
-            max-width: 300px;
-            margin: 0 auto 25px auto;
+            max-width: 290px;
+            margin: 0 auto 20px auto;
         }
 
         .card-item {
             width: 100%;
-            height: 100px;
-            background-color: #fef0f3;
-            border-radius: 20px;
+            height: 95px;
+            background-color: #fdf5f6;
+            border-radius: 16px;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #a8989c;
-            font-size: 13px;
+            color: #b09c9f;
+            font-size: 12px;
             font-weight: 400;
-            border: 1.5px dashed #ffccd5;
-            transition: transform 0.2s ease, background-color 0.2s ease;
+            border: 1px solid #f2dbe0;
+            transition: all 0.2s ease;
         }
 
         .card-item:hover {
-            transform: translateY(-2px);
-            background-color: #ffe6ed;
+            background-color: #faeaed;
         }
 
-        /* ส่วน Contact Us แบบน่ารัก */
+        /* ส่วน Contact Us แบบน่ารักมินิมอล */
         .contact-section {
             text-align: center;
-            margin: 15px 0 20px 0;
+            margin: 10px 0 15px 0;
             width: 100%;
         }
 
         .contact-title {
-            font-size: 15px;
-            color: #d17a93;
-            font-weight: 600;
+            font-size: 13px;
+            color: #b37384;
+            font-weight: 500;
             margin-bottom: 12px;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
         }
 
         .contact-buttons {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 15px;
         }
 
         .contact-btn {
-            width: 52px;
-            height: 52px;
-            background: #ffffff;
-            border: 2px solid #ffd1dc;
+            width: 44px;
+            height: 44px;
+            background-color: #ffffff;
+            border: 1.5px solid #f2dbe0;
             border-radius: 50%;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             text-decoration: none;
-            color: #5c454d;
-            box-shadow: 0 4px 10px rgba(255, 182, 193, 0.25);
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative;
-        }
-
-        .contact-btn span {
+            color: #614d53;
             font-size: 14px;
-            font-weight: 600;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 8px rgba(245, 219, 224, 0.3);
         }
 
         .contact-btn:hover {
-            transform: scale(1.1) translateY(-3px);
-            background-color: #fff0f3;
-            border-color: #ffb6c1;
-            box-shadow: 0 6px 15px rgba(255, 182, 193, 0.4);
+            background-color: #fae1e6;
+            border-color: #f5ccd4;
+            transform: translateY(-2px);
         }
 
         /* ฟุตเตอร์เว็บไซต์ */
         .footer-text {
-            margin-top: 10px;
+            margin-top: 15px;
             font-size: 11px;
-            color: #b0a6a9;
+            color: #b8a8ad;
             letter-spacing: 1px;
             font-weight: 400;
         }
@@ -238,16 +231,16 @@
 
         <!-- โลโก้ -->
         <div class="logo-area">
-            <span style="font-size: 22px;">🌱</span>
+            <span style="font-size: 18px;">🌷</span>
             <span>โลโก้</span>
         </div>
 
         <!-- ข้อความต้อนรับ -->
         <div class="intro-section">
             <h1>WELCOME TO MIORI STUDIO</h1>
-            <p class="typewriter-text">ร้านมิโอริ บริการรับทำ ทำป้าย ลายน้ำ ขายฟอนต์ ดึงเข้ากลุ่ม</p>
-            <p class="typewriter-text">และ รับทำเว็บไซต์ต่างๆมีเทมเพลสให้เลือกสรร</p>
-            <p class="typewriter-text">ลูกค้าต้องการอะไรสามารถแจ้งได้เลยน้า</p>
+            <p>ร้านมิโอริ บริการรับทำ ทำป้าย ลายน้ำ ขายฟอนต์ ดึงเข้ากลุ่ม</p>
+            <p>และ รับทำเว็บไซต์ต่างๆมีเทมเพลสให้เลือกสรร</p>
+            <p>ลูกค้าต้องการอะไรสามารถแจ้งได้เลยน้า</p>
         </div>
 
         <!-- ปุ่ม Link Bio -->
@@ -266,13 +259,9 @@
             <div class="contact-title">💗 Contact us 💗</div>
             <div class="contact-buttons">
                 <!-- ปุ่ม Facebook -->
-                <a href="#" class="contact-btn" title="Facebook">
-                    <span style="color: #1877f2;">f</span>
-                </a>
+                <a href="#" class="contact-btn" title="Facebook">f</a>
                 <!-- ปุ่ม Line -->
-                <a href="#" class="contact-btn" title="Line">
-                    <span style="font-size: 11px; color: #06c755;">LINE</span>
-                </a>
+                <a href="#" class="contact-btn" title="Line" style="font-size: 11px; font-weight: 500;">Line</a>
             </div>
         </div>
 
