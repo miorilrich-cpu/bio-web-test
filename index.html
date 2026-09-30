@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miori Studio - Cute Minimal</title>
+    <title>Miori Studio - Minimal Links</title>
     <!-- เรียกใช้ฟอนต์ Prompt -->
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
@@ -113,22 +113,30 @@
             margin-bottom: 3px;
         }
 
-        /* ปุ่ม Link Bio แบบน่ารักนุ่มฟู */
-        .btn-bio {
-            display: block;
+        /* กลุ่มปุ่ม Link Bio 3 ปุ่ม */
+        .links-container {
             width: 82%;
             max-width: 290px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 20px auto 10px auto;
+        }
+
+        .btn-bio {
+            display: block;
+            width: 100%;
             background-color: #fae1e6;
             color: #614d53;
             text-align: center;
-            padding: 11px;
+            padding: 12px;
             border-radius: 20px;
             font-size: 14px;
             font-weight: 500;
             text-decoration: none;
-            margin: 18px auto;
             border: 1px solid #f5ccd4;
             transition: all 0.2s ease;
+            box-shadow: 0 2px 6px rgba(245, 204, 212, 0.2);
         }
 
         .btn-bio:hover {
@@ -136,39 +144,10 @@
             transform: translateY(-2px);
         }
 
-        /* ตารางกล่อง 4 ช่องสไตล์ละมุน */
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-            width: 82%;
-            max-width: 290px;
-            margin: 0 auto 20px auto;
-        }
-
-        .card-item {
-            width: 100%;
-            height: 95px;
-            background-color: #fdf5f6;
-            border-radius: 16px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #b09c9f;
-            font-size: 12px;
-            font-weight: 400;
-            border: 1px solid #f2dbe0;
-            transition: all 0.2s ease;
-        }
-
-        .card-item:hover {
-            background-color: #faeaed;
-        }
-
         /* ส่วน Contact Us แบบน่ารักมินิมอล */
         .contact-section {
             text-align: center;
-            margin: 10px 0 15px 0;
+            margin: 15px 0 15px 0;
             width: 100%;
         }
 
@@ -243,15 +222,11 @@
             <p>ลูกค้าต้องการอะไรสามารถแจ้งได้เลยน้า</p>
         </div>
 
-        <!-- ปุ่ม Link Bio -->
-        <a href="#" class="btn-bio">✨ Link Bio ✨</a>
-
-        <!-- กล่อง 4 ช่อง -->
-        <div class="grid-container">
-            <div class="card-item">พื้นที่ใส่รูป</div>
-            <div class="card-item">พื้นที่ใส่รูป</div>
-            <div class="card-item">พื้นที่ใส่รูป</div>
-            <div class="card-item">พื้นที่ใส่รูป</div>
+        <!-- ปุ่ม Link Bio 3 ปุ่ม -->
+        <div class="links-container">
+            <a href="#" class="btn-bio">✨ เช็คคิว / สถานะงาน ✨</a>
+            <a href="#" class="btn-bio">📂 ดูรีวิวและผลงาน</a>
+            <a href="#" class="btn-bio">💬 สอบถามเพิ่มเติม / สั่งซื้อ</a>
         </div>
 
         <!-- ส่วน Contact Us -->
