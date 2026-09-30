@@ -3,246 +3,357 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miori Studio - Minimal Links</title>
-    <!-- เรียกใช้ฟอนต์ Prompt -->
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Ribbon Princess Garden 🎀</title>
+    <!-- Google Fonts: Kanit & Itim สำหรับฟอนต์แนวหวานๆ น่ารัก -->
+    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Kanit:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- FontAwesome สำหรับไอคอน -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
+        :root {
+            --bg-color: #fff5f7;
+            --card-bg: #ffffff;
+            --primary-pink: #ffb7c5;
+            --deep-pink: #d46a84;
+            --text-color: #5c4033;
+            --border-pink: #ffccd5;
+        }
+
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Prompt', sans-serif;
+            font-family: 'Kanit', 'Itim', cursive, sans-serif;
         }
 
         body {
-            background-color: #fcf9f9;
-            color: #4a4547;
+            background-color: #f0ece9;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            color: var(--text-color);
         }
 
-        .page-wrapper {
+        /* จำลองหน้าจอโทรศัพท์มือถือ */
+        .phone-container {
             width: 100%;
-            max-width: 440px;
-            background-color: #ffffff;
-            min-height: 100vh;
+            max-width: 410px;
+            height: 840px;
+            background-color: var(--bg-color);
+            border: 12px solid #333;
+            border-radius: 40px;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        /* ซ่อน Scrollbar แต่ยังเลื่อนได้ */
+        .phone-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* แถบสถานะจำลองด้านบน */
+        .status-bar {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-bottom: 35px;
-            border-left: 1px solid #f2e9ec;
-            border-right: 1px solid #f2e9ec;
-            box-shadow: 0 4px 20px rgba(235, 215, 220, 0.15);
-        }
-
-        /* แบนเนอร์มินิมอลละมุนๆ */
-        .banner {
-            width: 100%;
-            height: 170px;
-            background: #faedeb;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .banner-box {
-            background: rgba(255, 255, 255, 0.85);
-            padding: 8px 20px;
-            border-radius: 12px;
-            text-align: center;
-            border: 1px solid #f5dcde;
-        }
-
-        .banner-box h2 {
-            font-size: 16px;
-            color: #615256;
+            justify-content: space-between;
+            padding: 10px 20px;
+            font-size: 14px;
             font-weight: 500;
         }
 
-        .banner-box p {
-            font-size: 12px;
-            color: #a89498;
-            font-weight: 400;
-        }
-
-        /* โลโก้วงกลมมินิมอล */
-        .logo-area {
-            width: 100px;
-            height: 100px;
-            background-color: #f0f7f4;
-            border: 3px solid #ffffff;
-            border-radius: 50%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin-top: -50px;
-            z-index: 10;
-            border: 1px solid #d8e8e2;
-        }
-
-        .logo-area span {
-            font-size: 13px;
-            font-weight: 400;
-            color: #648275;
-            margin-top: 2px;
-        }
-
-        /* ส่วนข้อความต้อนรับ */
-        .intro-section {
+        /* ส่วนหัวเว็บไซต์ */
+        .header {
             text-align: center;
-            padding: 18px 24px 10px 24px;
-            width: 100%;
+            padding: 15px 20px;
+            position: relative;
         }
 
-        .intro-section h1 {
+        .header .menu-icon {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            font-size: 20px;
+            cursor: pointer;
+            color: var(--deep-pink);
+        }
+
+        .ribbon-title {
+            font-size: 26px;
+            color: var(--deep-pink);
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
             font-size: 14px;
-            letter-spacing: 1px;
-            color: #4a4043;
-            margin-bottom: 8px;
-            font-weight: 600;
+            color: #8c6d62;
+            margin-bottom: 15px;
         }
 
-        .intro-section p {
-            font-size: 12px;
-            color: #857579;
-            line-height: 1.6;
-            margin-bottom: 3px;
+        /* กรอบรูปโปรไฟล์ทรงเจ้าหญิง */
+        .avatar-box {
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 15px auto;
+            border-radius: 50%;
+            border: 3px dashed var(--deep-pink);
+            padding: 4px;
+            background: #fff;
         }
 
-        /* กลุ่มปุ่ม Link Bio 3 ปุ่ม */
-        .links-container {
-            width: 82%;
-            max-width: 290px;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin: 20px auto 10px auto;
-        }
-
-        .btn-bio {
-            display: block;
+        .avatar-box img {
             width: 100%;
-            background-color: #fae1e6;
-            color: #614d53;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* กล่องข้อความต้อนรับ */
+        .welcome-card {
+            background: var(--card-bg);
+            margin: 0 20px 15px 20px;
+            padding: 15px;
+            border-radius: 20px;
+            text-align: center;
+            border: 2px solid var(--border-pink);
+            box-shadow: 0 4px 10px rgba(255, 183, 197, 0.2);
+        }
+
+        .welcome-card h3 {
+            color: var(--deep-pink);
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .welcome-card p {
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        /* เมนูปุ่มทางลัด (Grid) */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            padding: 0 20px;
+            margin-bottom: 20px;
+        }
+
+        .menu-item {
+            background: var(--card-bg);
+            border: 2px solid var(--border-pink);
+            border-radius: 15px;
+            padding: 12px 5px;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-3px);
+            background: #fff0f3;
+        }
+
+        .menu-item i {
+            font-size: 22px;
+            color: var(--deep-pink);
+            margin-bottom: 5px;
+        }
+
+        .menu-item span {
+            display: block;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        /* ปุ่มกดกว้าง */
+        .action-button {
+            display: block;
+            margin: 0 20px 20px 20px;
+            background: linear-gradient(135deg, #ffb7c5, #d46a84);
+            color: white;
             text-align: center;
             padding: 12px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 500;
+            border-radius: 25px;
             text-decoration: none;
-            border: 1px solid #f5ccd4;
-            transition: all 0.2s ease;
-            box-shadow: 0 2px 6px rgba(245, 204, 212, 0.2);
-        }
-
-        .btn-bio:hover {
-            background-color: #f7d1d9;
-            transform: translateY(-2px);
-        }
-
-        /* ส่วน Contact Us แบบน่ารักมินิมอล */
-        .contact-section {
-            text-align: center;
-            margin: 15px 0 15px 0;
-            width: 100%;
-        }
-
-        .contact-title {
-            font-size: 13px;
-            color: #b37384;
             font-weight: 500;
-            margin-bottom: 12px;
-            letter-spacing: 0.5px;
+            box-shadow: 0 4px 12px rgba(212, 106, 132, 0.3);
         }
 
-        .contact-buttons {
+        /* ส่วนรายการสินค้า/บริการ */
+        .section-title {
+            padding: 0 20px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: var(--deep-pink);
+            font-weight: bold;
             display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .contact-btn {
-            width: 44px;
-            height: 44px;
-            background-color: #ffffff;
-            border: 1.5px solid #f2dbe0;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
             align-items: center;
+            gap: 8px;
+        }
+
+        .service-list {
+            padding: 0 20px;
+            margin-bottom: 80px; /* เว้นที่ให้ Navbar ด้านล่าง */
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            border: 2px solid var(--border-pink);
+            border-radius: 15px;
+            padding: 12px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .service-info h4 {
+            font-size: 15px;
+            color: var(--text-color);
+        }
+
+        .service-info p {
+            font-size: 12px;
+            color: #8c6d62;
+        }
+
+        .service-card i {
+            color: var(--deep-pink);
+            font-size: 16px;
+        }
+
+        /* แถบเมนูด้านล่าง (Bottom Navbar) */
+        .bottom-nav {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            border-top: 2px solid var(--border-pink);
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            backdrop-filter: blur(5px);
+        }
+
+        .nav-item {
+            text-align: center;
+            color: #b59b93;
             text-decoration: none;
-            color: #614d53;
-            font-size: 14px;
-            transition: all 0.2s ease;
-            box-shadow: 0 2px 8px rgba(245, 219, 224, 0.3);
-        }
-
-        .contact-btn:hover {
-            background-color: #fae1e6;
-            border-color: #f5ccd4;
-            transform: translateY(-2px);
-        }
-
-        /* ฟุตเตอร์เว็บไซต์ */
-        .footer-text {
-            margin-top: 15px;
             font-size: 11px;
-            color: #b8a8ad;
-            letter-spacing: 1px;
-            font-weight: 400;
+        }
+
+        .nav-item.active, .nav-item:hover {
+            color: var(--deep-pink);
+        }
+
+        .nav-item i {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 2px;
         }
     </style>
 </head>
 <body>
 
-    <div class="page-wrapper">
-        <!-- แบนเนอร์ -->
-        <div class="banner">
-            <div class="banner-box">
-                <h2>แบนเนอร์</h2>
-                <p>1122 * 495</p>
+    <div class="phone-container">
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <span>9:41</span>
+            <div>
+                <i class="fa-solid fa-signal"></i>
+                <i class="fa-solid fa-wifi"></i>
+                <i class="fa-solid fa-battery-full"></i>
             </div>
         </div>
 
-        <!-- โลโก้ -->
-        <div class="logo-area">
-            <span style="font-size: 18px;">🌷</span>
-            <span>โลโก้</span>
-        </div>
-
-        <!-- ข้อความต้อนรับ -->
-        <div class="intro-section">
-            <h1>WELCOME TO MIORI STUDIO</h1>
-            <p>ร้านมิโอริ บริการรับทำ ทำป้าย ลายน้ำ ขายฟอนต์ ดึงเข้ากลุ่ม</p>
-            <p>และ รับทำเว็บไซต์ต่างๆมีเทมเพลสให้เลือกสรร</p>
-            <p>ลูกค้าต้องการอะไรสามารถแจ้งได้เลยน้า</p>
-        </div>
-
-        <!-- ปุ่ม Link Bio 3 ปุ่ม -->
-        <div class="links-container">
-            <a href="#" class="btn-bio">✨ เช็คคิว / สถานะงาน ✨</a>
-            <a href="#" class="btn-bio">📂 ดูรีวิวและผลงาน</a>
-            <a href="#" class="btn-bio">💬 สอบถามเพิ่มเติม / สั่งซื้อ</a>
-        </div>
-
-        <!-- ส่วน Contact Us -->
-        <div class="contact-section">
-            <div class="contact-title">💗 Contact us 💗</div>
-            <div class="contact-buttons">
-                <!-- ปุ่ม Facebook -->
-                <a href="#" class="contact-btn" title="Facebook">f</a>
-                <!-- ปุ่ม Line -->
-                <a href="#" class="contact-btn" title="Line" style="font-size: 11px; font-weight: 500;">Line</a>
+        <!-- Header -->
+        <div class="header">
+            <div class="menu-icon"><i class="fa-solid fa-bars"></i></div>
+            <div class="ribbon-title">🎀 Ribbon Princess 🎀</div>
+            <div class="subtitle">Princess Garden & Sweet Atelier ✨</div>
+            
+            <!-- Avatar -->
+            <div class="avatar-box">
+                <!-- เปลี่ยนลิงก์รูปภาพโปรไฟล์ของคุณตรงนี้ -->
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300" alt="Princess Avatar">
             </div>
         </div>
 
-        <!-- ฟุตเตอร์ -->
-        <div class="footer-text">
-            WWW.MIORI.STUDIO.COM
+        <!-- Welcome Box -->
+        <div class="welcome-card">
+            <h3>Welcome to my Garden 🌷</h3>
+            <p>รับทำเว็บไซต์สไตล์เจ้าหญิง • แอพแพลนเนอร์ • คอร์สเรียนออนไลน์<br>ตกแต่งด้วยความปราณีตและน่ารักที่สุดสำหรับคุณ 🤍</p>
+        </div>
+
+        <!-- Quick Menu Grid -->
+        <div class="menu-grid">
+            <div class="menu-item">
+                <i class="fa-solid fa-laptop-code"></i>
+                <span>บริการของเรา</span>
+            </div>
+            <div class="menu-item">
+                <i class="fa-solid fa-book-open"></i>
+                <span>Goodnote App</span>
+            </div>
+            <div class="menu-item">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <span>คอร์สสอนทำเว็บ</span>
+            </div>
+        </div>
+
+        <a href="#" class="action-button">ดูบริการทั้งหมด 💖</a>
+
+        <!-- Service List Section -->
+        <div class="section-title">
+            <i class="fa-solid fa-spa"></i> Price List & Services
+        </div>
+
+        <div class="service-list">
+            <div class="service-card">
+                <div class="service-info">
+                    <h4>รับทำเว็บไซต์ (Ribbon Style)</h4>
+                    <p>เริ่มต้น 129.- • ดีไซน์หวานละมุน</p>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+
+            <div class="service-card">
+                <div class="service-info">
+                    <h4>Goodnote App / Planner</h4>
+                    <p>เริ่มต้น 20.- • ไฟล์สวย ใช้งานง่าย</p>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+
+            <div class="service-card">
+                <div class="service-info">
+                    <h4>คอร์สสอนทำเว็บไซต์เจ้าหญิง</h4>
+                    <p>ราคาโปรโมชั่น 299.- • สอนตั้งแต่พื้นฐาน</p>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation Bar -->
+        <div class="bottom-nav">
+            <a href="#" class="nav-item active">
+                <i class="fa-solid fa-house"></i>
+                Home
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-images"></i>
+                Portfolio
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-clipboard-list"></i>
+                Queue
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-paper-plane"></i>
+                Contact
+            </a>
         </div>
     </div>
 
